@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cafe de Paris</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #FFFFFF;
+    }
+   
+    .full-height-container {
+      height: 60vh;
+
+    }
+
+    .left-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #93aa83;
+      height: 100%;
+    }
+
+    .right-content {
+      background: url('./images/img35.jpg') no-repeat center center;
+      background-size: cover;
+      height: 100%;
+    }
+
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #4A7132;
+      text-align: center;
+      z-index: 1000;
+    }
+
+    .custom-btn {
+      background-color: #93aa83; 
+      color: #fff; 
+      padding: 10px 25px; 
+      margin-left: 50px;
+      margin-right: 50px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      font-size: 14px; 
+      border: none; 
+      border-radius: 5px; 
+    }
+
+    .navbar a {
+      display: inline-block;
+      padding: 20px;
+      color: #FFFFFF;
+    }
+   .logo{
+    width: 50%;
+   }
+
+   .background-container {
+      background: url('./images/img4.jpg') no-repeat center center fixed;
+      background-size: cover;
+      min-height: 90vh; 
+      position: relative;
+    }
+
+    
+    .item {
+      background-color: rgba(255, 255, 255, 0.8); 
+      padding: 15px;
+      margin: 10px;
+      border-radius: 5px;
+      height: 270px;
+        overflow: hidden; 
+
+    }
+
+    .item p {
+      margin-top: 5px;
+    }
+
+    .outer-div {
+      min-height: 300vh;
+      background-color: #e4eae0; 
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .inner-div {
+      margin: 10px; 
+      padding: 20px; 
+      background-color: rgba(255, 255, 255, 0.8); 
+      box-sizing: border-box; 
+      width: 100%;
+      min-height: 300vh;
+    }
+
+
+
+    .first-row {
+      background: url('./images/img3.jpg') no-repeat center center;
+      background-size: cover;
+      color: #fff;
+      text-align: center;
+      padding: 100px 0;
+      font-size: 1.5rem;
+    }
+
+    .second-row {
+      text-align: center;
+      padding: 50px 0;
+    }
+
+    .ordered-list {
+      list-style-type: none;
+      font-size: 24px;
+      list-style: none;
+      margin-top: 70px ;
+      padding: 0;
+    }
+    .ordered-list ol{
+      list-style-type: none;
+      list-style: none;
+     
+    }
+
+    .ordered-list li {
+      list-style: none;
+
+      list-style-type: none;
+      position: relative;
+      margin-bottom: 50px;
+      padding-left: 20px;
+    }
+
+    .ordered-list li:before {
+      color: #28a745; 
+      font-size: 36px; 
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .form-container {
+      background-color: #4A7132;
+      min-height: 100vh;
+      color: #fff;
+      padding: 50px;
+      box-sizing: border-box;
+      margin: 0;
+      padding-top: 120px;
+      min-width: 100%;
+      
+    }
+
+    .form-container input::placeholder {
+      color: #fff; 
+      background-color: #4A7132; 
+    }
+
+    .form-container input {
+      background-color: #4A7132; 
+      border: 1px solid #fff; 
+      color: #fff; 
+    }
+
+    .form-container textarea {
+      background-color: #4A7132; 
+      border: 1px solid #fff; 
+      color: #fff; 
+    }
+
+    .form-container textarea::placeholder {
+      color: #fff; 
+      background-color: #4A7132; 
+    }
+
+
+    .address-container {
+      min-height: 120vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      margin-top: 50px;
+    }
+
+    .title {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 50px;
+    }
+
+    .map {
+      width: 900px;
+      height: 400px; 
+      border: 1px solid #dee2e6; 
+    }
+
+    .copyright {
+      margin-top: 20px;
+      font-size: 0.8rem;
+      color: #6c757d; 
+    }
+
+
+
+
+
+
+   
+  </style>
+   
+
+</head>
+<body>
+  <nav class="navbar">
+    <a href="#about">
+      <img src="images/logo.png" class="mx-auto d-block logo" alt="Logo" style="height: 20px; width: auto;">      
+  </a>
+    <a href="#about">About</a>
+    <a href="#menu">Menu</a>
+    <a href="#reservation">Reservation</a>
+    <a href="#address">Address</a>
+  </nav>
+  
+  <div class="container" style="margin-top: 355px; margin-bottom: 355px;">
+    <img src="images/logo.png" class="mx-auto d-block logo" alt="Logo">
+  </div>
+  <div class="container-fluid full-height-container" id="about">
+      
+    <div class="row" style="height: 100%;">
+      <!-- Left Column -->
+      <div class="col-md-6 left-content text-center d-flex flex-column justify-content-center ">
+        <h2>Qui somme nous?</h2>
+        <p>朝6時からオープン!!ランチタイムは、定番のパスタやカレーなどの日替わりランチがおすすめ! 西 新 宿 だ か ら 交 通 の 便 も よ く 、お 集 ま り・ シ ョ ッ ピ ン グ な ど に も 最 適 ! お 二 人 だ け の ラ ン チ タ イ ム に い か が で す か 。</p>
+      </div>
+      
+      
+      <!-- Right Column -->
+      <div class="col-md-6 right-content"></div>
+    </div>
+  </div>
+
+  <div class="container-fluid background-container d-flex align-items-end" id="reservation">
+    <div class="row justify-content-center" style="width: 100%; margin-bottom: 60px;" >
+      <!-- Item 1 -->
+      <div class="col-md-3 item  text-center d-flex flex-column justify-content-center">
+        <h4>13人未満</h4>
+        <button type="button" class="btn btn-success">RÉSERVATION</button>
+
+        <p>Notre quota de résas est tout petit alors pas de panique car une partie de nos places sont SANS réservation.
+          </p>
+      </div>
+      
+      <!-- Item 2 -->
+      <div class="col-md-3 item  text-center d-flex flex-column justify-content-center">
+        <h4>13名様から30名様まで</h4>
+        <button type="button" class="btn btn-success">RÉSA GROUPE</button>
+
+        <p>On vous propose des menus de groupe pour vos déjeuners, dîners, anniversaires ou tout autre banquet en bande organisée.</p>
+      </div>
+      
+      <!-- Item 3 -->
+      <div class="col-md-3 item  text-center d-flex flex-column justify-content-center">
+        <h4>30名様から</h4>
+        <button type="button" class="btn btn-success">PRIVATISATION</button>
+        
+
+        <p>Si vous êtes plus de 30 à vouloir en découdre, notre brasserie est privatisable entièrement ou en partie.</p>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid outer-div" id="menu">
+    <div class="inner-div">
+      <div class="container-fluid" style="margin-top: 150px; margin-bottom: 200px;">
+        <div class="row">
+          <!-- Left Column with Image -->
+          <div class="col-md-6">
+            <img src="./images/img13.jpg" alt="Left Image" class="img-fluid">
+          </div>
+      
+          <!-- Right Column with Title and Image -->
+          <div class="col-md-6">
+            <!-- Top Row with Title -->
+            <div class="row">
+              <div class="col">
+                <h2 style="color: #93aa83; padding-bottom: 10px; font-size: 2.5rem; border-bottom: 1px solid #93aa83;">NOS MENUS</h2>
+              </div>
+            </div>
+      
+            <!-- Bottom Row with Image -->
+            <div class="row">
+              <div class="col">
+                <img src="./images/img17.jpg" alt="Bottom Image" class="img-fluid">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container mt-5">
+        <!-- First Row with Title -->
+        <div class="row">
+          <div class="col">
+            <h2 class="text-left" style="color: #93aa83; margin-bottom: 80px; font-size: 1.5rem; border-bottom: 1px solid #93aa83;">petit-déjeuner   朝食</h2>
+          </div>
+        </div>
+      
+        <!-- Second Row with Cards -->
+        <div class="row">
+          <!-- Card 1 -->
+          <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="./images/img11.jpg" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text" style="font-size: 1.5rem; color: #93aa83;">Croissant</p>
+                <p class="card-text">400円</p>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Card 2 -->
+          <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="./images/img18.jpg" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text" style="font-size: 1.5rem; color: #93aa83;">Café et Macaron</p>
+                <p class="card-text">850円</p>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Card 3 -->
+          <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="./images/img19.jpg" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text" style="font-size: 1.5rem; color: #93aa83;">Pancake</p>
+                <p class="card-text">350円</p>              </div>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Third Row with Cards -->
+        <div class="row" style="margin-top: 50px;">
+          <!-- Card 4 -->
+          <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="./images/img28.jpg" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text" style="font-size: 1.5rem; color: #93aa83;">French Toast</p>
+                <p class="card-text">900円</p>              </div>
+            </div>
+          </div>
+      
+          <!-- Card 5 -->
+          <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="./images/img49.jpg" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text" style="font-size: 1.5rem; color: #93aa83;">Ham Toast</p>
+                <p class="card-text">650円</p>              </div>
+            </div>
+          </div>
+      
+          <!-- Card 6 -->
+          <div class="col-md-4">
+            <div class="card" style="width: 18rem;;">
+              <img class="card-img-top" src="./images/img42.jpg" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text" style="font-size: 1.5rem; color: #93aa83;">Pasta Fromage</p>
+                <p class="card-text">1150円</p>              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <div class="container mt-5">
+        <!-- First Row with Title -->
+        <div class="row">
+          <div class="col">
+            <h2 class="text-right" style="color: #93aa83; margin-bottom: 80px;margin-top: 120px; font-size: 1.5rem; border-bottom: 1px solid #93aa83;">déjeuner   昼食</h2>
+          </div>
+        </div>
+      
+        <!-- Second Row with Cards -->
+        <div class="row">
+          <!-- Card 1 -->
+          <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="./images/img32.jpg" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text" style="font-size: 1.5rem; color: #93aa83;">Spaghetti Bolognese</p>
+                <p class="card-text">980円</p>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Card 2 -->
+          <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="./images/img44.jpg" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text" style="font-size: 1.5rem; color: #93aa83;">Pizza Margherita</p>
+                <p class="card-text">1550円</p>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Card 3 -->
+          <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="./images/img43.jpg" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text" style="font-size: 1.5rem; color: #93aa83;">Laces al Pesto</p>
+                <p class="card-text">850円</p>              </div>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Third Row with Cards -->
+        <div class="row" style="margin-top: 50px;">
+          <!-- Card 4 -->
+          <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="./images/img48.jpg" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text" style="font-size: 1.5rem; color: #93aa83;">Quiche</p>
+                <p class="card-text">700円</p>              </div>
+            </div>
+          </div>
+      
+          <!-- Card 5 -->
+          <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="./images/img45.jpg" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text" style="font-size: 1.5rem; color: #93aa83;">Ham Sandwich</p>
+                <p class="card-text">650円</p>              </div>
+            </div>
+          </div>
+      
+          <!-- Card 6 -->
+          <div class="col-md-4">
+            <div class="card" style="width: 18rem;;">
+              <img class="card-img-top" src="./images/img40.jpg" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text" style="font-size: 1.5rem; color: #93aa83;">Potato Salad</p>
+                <p class="card-text">500円</p>              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+      <div class="container mt-5" style="margin-bottom: 200px ;">
+        <!-- First Row with Title -->
+        <div class="row">
+          <div class="col">
+            <h2 class="text-left" style="color: #93aa83; margin-bottom: 80px;margin-top: 120px; font-size: 1.5rem; border-bottom: 1px solid #93aa83;">Soire　ディナー</h2>
+          </div>
+        </div>
+      
+        <!-- Second Row with Cards -->
+        <div class="row">
+          <!-- Card 1 -->
+          <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="./images/img47.jpg" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text" style="font-size: 1.5rem; color: #93aa83;">Spinach Toast Salad</p>
+                <p class="card-text">1280円</p>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Card 2 -->
+          <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="./images/img50.jpg" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text" style="font-size: 1.5rem; color: #93aa83;">Pizza Pepperoni</p>
+                <p class="card-text">1700円</p>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Card 3 -->
+          <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="./images/img38.jpg" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text" style="font-size: 1.5rem; color: #93aa83;">Risotto</p>
+                <p class="card-text">1350円</p>              </div>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Third Row with Cards -->
+        <div class="row" style="margin-top: 50px;">
+          <!-- Card 4 -->
+          <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="./images/img34.jpg" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text" style="font-size: 1.5rem; color: #93aa83;">Cheeseburger and Soup</p>
+                <p class="card-text">990円</p>              </div>
+            </div>
+          </div>
+      
+          <!-- Card 5 -->
+          <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="./images/img36.jpg" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text" style="font-size: 1.5rem; color: #93aa83;">British Course</p>
+                <p class="card-text">1250円</p>              </div>
+            </div>
+          </div>
+      
+          <!-- Card 6 -->
+          <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="./images/img33.jpg" alt="Card image cap">
+              <div class="card-body">
+                <p class="card-text" style="font-size: 1.5rem; color: #93aa83;">Penne a la Bolognese</p>
+                <p class="card-text">890円</p>              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+
+      <div class="container-fluid first-row">
+        <!-- First Row with Title and Image Background -->
+        <div class="row">
+          <div class="col">
+            <h2 style="font-size: 3rem;">Nouvelles</h2>
+          </div>
+        </div>
+      </div>
+      
+      <div class="container second-row">
+        <!-- Second Row with Ordered List -->
+        <div class="row">
+          <div class="col">
+            <ol class="ordered-list">
+              <li><strong>2018年10月11日</strong> 新規サイトオープン企画 Webサイトを見て特製ケーキをもらおう!</li>
+              <li><strong>2018年10月11日</strong> 新作マカロン登場!!</li>
+              <li><strong>2018年10月10日</strong> お待たせ致しました!カフェ・ド・パリWebサイトをオープン致しました。</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+
+  <div class="container form-container">
+    <!-- Title and Description -->
+    <div class="row" style="margin-bottom: 90px;">
+      <div class="col text-center">
+        <h2>予約フォーム</h2>
+        <p>FORMULAIRE DE PRÉ-DEMANDE DE RÉSERVATION DE GROUPE OU PRIVATISATION</p>
+      </div>
+    </div>
+  
+    <!-- Form Items -->
+    <div class="row">
+      <!-- Item 1 and 2 -->
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="item1">Nom</label>
+          <input type="text" class="form-control" id="item1" placeholder="名">
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="item2">Prenom</label>
+          <input type="text" class="form-control" id="item2" placeholder="姓">
+        </div>
+      </div>
+  
+      <!-- Item 3 and 4 -->
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="item3">Email</label>
+          <input type="text" class="form-control" id="item3" placeholder="Email">
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="item4">Phone</label>
+          <input type="text" class="form-control" id="item4" placeholder="電話番号  ">
+        </div>
+      </div>
+  
+      <!-- Item 5 and 6 -->
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="item5">Number of people</label>
+          <input type="text" class="form-control" id="item5" placeholder="人数">
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="item6">Date</label>
+          <input type="text" class="form-control" id="item6" placeholder="日付け">
+        </div>
+      </div>
+  
+      <!-- Message Item -->
+      <div class="col-md-12">
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea class="form-control" id="message" rows="3" placeholder="メッセージを入力してください。。。"></textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container address-container">
+    <!-- Title -->
+    <div class="row">
+      <div class="col text-center">
+        <h1 class="title" style="color: #4A7132;">Address</h1>
+      </div>
+    </div>
+
+    <!-- Address Description -->
+    <div class="row">
+      <div class="col text-center">
+        <p style="font-size: 1.5rem; color: #93aa83; margin-bottom: 70px;">1 Chome-7-3 Nishishinjuku, Shinjuku City, Tokyo 160-0023</p>
+      </div>
+    </div>
+
+    <!-- Google Maps iframe -->
+    <div class="row" id="address">
+      <div class="col">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d255.07833499064344!2d139.6967227823091!3d35.691594718321596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d0a69d76099%3A0x7a5627292269c29e!2sCocoon%20Tower!5e0!3m2!1ses!2sjp!4v1701235630563!5m2!1ses!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+
+    <!-- Copyright Text -->
+    <div class="row" style="margin-top: 160px;">
+      <div class="col text-center">
+        <p class="copyright">&copy; 2023 Cafe de Paris. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+
+
+
+ 
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+
+   
+  
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
